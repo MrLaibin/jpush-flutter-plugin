@@ -14,6 +14,22 @@
                 <action android:name="cn.jpush.android.intent.CONNECTION" />
                 <category android:name="${applicationId}" />
             </intent-filter>
+            <intent-filter android:priority="1000">
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED_PROXY" />
+                <!--Required  显示通知栏 -->
+                <category android:name="${applicationId}" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.USER_PRESENT" />
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+            <!-- Optional -->
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_ADDED" />
+                <action android:name="android.intent.action.PACKAGE_REMOVED" />
+
+                <data android:scheme="com.juhesaas.shopkeeper.admin" />
+            </intent-filter>
         </receiver>
 
         <receiver android:name="com.jiguang.jpush.JPushEventReceiver">
