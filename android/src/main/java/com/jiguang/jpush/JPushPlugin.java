@@ -452,7 +452,7 @@ public class JPushPlugin implements FlutterPlugin, MethodCallHandler {
     }
 
 
-    static void transmitMessageReceive(String message, Map<String, Object> extras) {
+    public static void transmitMessageReceive(String message, Map<String, Object> extras) {
         Log.d(TAG, "transmitMessageReceive " + "message=" + message + "extras=" + extras);
 
         if (instance == null) {
@@ -465,7 +465,7 @@ public class JPushPlugin implements FlutterPlugin, MethodCallHandler {
         JPushPlugin.instance.channel.invokeMethod("onReceiveMessage", msg);
     }
 
-    static void transmitNotificationOpen(String title, String alert, Map<String, Object> extras) {
+    public static void transmitNotificationOpen(String title, String alert, Map<String, Object> extras) {
         Log.d(TAG, "transmitNotificationOpen " + "title=" + title + "alert=" + alert + "extras=" + extras);
 
         Map<String, Object> notification = new HashMap<>();
@@ -487,7 +487,7 @@ public class JPushPlugin implements FlutterPlugin, MethodCallHandler {
 
     }
 
-    static void transmitNotificationReceive(String title, String alert, Map<String, Object> extras) {
+    public static void transmitNotificationReceive(String title, String alert, Map<String, Object> extras) {
         Log.d(TAG, "transmitNotificationReceive " + "title=" + title + "alert=" + alert + "extras=" + extras);
 
         if (instance == null) {
@@ -501,7 +501,7 @@ public class JPushPlugin implements FlutterPlugin, MethodCallHandler {
         JPushPlugin.instance.channel.invokeMethod("onReceiveNotification", notification);
     }
 
-    static void transmitReceiveRegistrationId(String rId) {
+    public static void transmitReceiveRegistrationId(String rId) {
         Log.d(TAG, "transmitReceiveRegistrationId： " + rId);
 
         if (instance == null) {
