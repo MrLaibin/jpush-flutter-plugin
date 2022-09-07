@@ -44,7 +44,7 @@ dependencies {
     // 接入荣耀厂商
     implementation 'cn.jiguang.sdk.plugin:honor:4.7.2'
     // 接入魅族厂商
-    implementation 'cn.jiguang.sdk.plugin:meizu:4.7.2'
+    // implementation 'cn.jiguang.sdk.plugin:meizu:4.7.2'
     // 接入 VIVO 厂商
     implementation 'cn.jiguang.sdk.plugin:vivo:4.7.2'
     // 接入 OPPO 厂商
